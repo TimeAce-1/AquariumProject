@@ -23,7 +23,7 @@ public class AquaSimApplication
      **/
     public static void main(String args[])
     {
-        System.out.println("This will be an aquarium simulation.");
+        System.out.println("Watch the fishies swim :)");
 
         // CONSTRUCT OBJECTS NEEDED FOR THE AQUARIUM SIMULATION.
 
@@ -41,7 +41,7 @@ public class AquaSimApplication
         userInterface = new AquaSimGUI(aqua);  // ... and then GUI itself
 
         // Tell the user how to start the aquarium simulation.
-        System.out.println("Press the Start button to start the simulation.");
+        System.out.println("Press the start button to start the simulation.");
 
         // Now wait for the user to press the start button.
         userInterface.waitForStart();
