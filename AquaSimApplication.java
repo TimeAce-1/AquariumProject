@@ -37,9 +37,9 @@ public class AquaSimApplication
         
         // Construct fish and add them to the aquarium.
         
-        AquaFish nemo = new AquaFish(aqua, Color.RED);
-        AquaFish teemo = new AquaFish(aqua, Color.BLUE);
-        AquaFish gyrados = new AquaFish(aqua, Color.BLUE);
+        AquaFish nemo = new AquaFish(aqua, getColor());
+        AquaFish teemo = new AquaFish(aqua, getColor());
+        AquaFish gyrados = new AquaFish(aqua, getColor());
         aqua.add(nemo);
         aqua.add(teemo);
         aqua.add(gyrados); 
@@ -87,5 +87,30 @@ public class AquaSimApplication
         userInterface.println ("Close GUI display window to quit.");
 
     }//end main
-
+     public static Color getColor()
+    {
+        Random generator = new Random();
+        int color = generator.nextInt(12);
+        if (color==0|| color==1 || color==2)
+            return Color.RED;
+        else if (color==3||color==4)
+            return Color.YELLOW;
+        else if (color==5)
+            return Color.ORANGE;
+        else if (color==6||color==7||color==8||color==9)
+            return Color.BLUE;
+        else if (color==10)
+            return Color.GREEN;
+        else 
+            return Color.MAGENTA;
+         
+    }
+    
+    public static boolean changeDir()
+    {
+        Random generator = new Random();
+        if (generator.nextInt(4) ==0)
+            return true;
+        return false;
+    }
 }//end class
